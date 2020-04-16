@@ -3,15 +3,15 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 
 const ListScreen = () => {
   const friends = [
-    { name: 'Friend #1', age: 'Age 20' },
-    { name: 'Friend #2', age: 'Age 45' },
-    { name: 'Friend #3', age: 'Age 32' },
-    { name: 'Friend #4', age: 'Age 27' },
-    { name: 'Friend #5', age: 'Age 53' },
-    { name: 'Friend #6', age: 'Age 30' },
-    { name: 'Friend #7', age: 'Age 15' },
-    { name: 'Friend #8', age: 'Age 33' },
-    { name: 'Friend #9', age: 'Age 28' }
+    { name: 'Friend #1', age: '20' },
+    { name: 'Friend #2', age: '45' },
+    { name: 'Friend #3', age: '32' },
+    { name: 'Friend #4', age: '27' },
+    { name: 'Friend #5', age: '53' },
+    { name: 'Friend #6', age: '30' },
+    { name: 'Friend #7', age: '25' },
+    { name: 'Friend #8', age: '33' },
+    { name: 'Friend #9', age: '28' }
   ];
 
   return (
@@ -20,7 +20,9 @@ const ListScreen = () => {
       keyExtractor={(friend) => friend.name}
       data={friends} 
       renderItem={({ item }) => {
-      return <Text style={styles.textStyle}>{item.name} - {item.age}</Text>;
+      return <Text style={styles.textStyle}>
+          {item.name} - Age {item.age}
+        </Text>;
       }}
     />
   );
