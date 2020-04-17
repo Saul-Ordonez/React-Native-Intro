@@ -20,7 +20,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "App"
+      title: "Random Stuff"
     }
   }
 );
